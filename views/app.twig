@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/gif" href="/img/favicon.gif">
+		
+		<link rel="stylesheet" href="/css/main.css">
+		
+		<title>AGRON {%if title %} | {{ title }} {% endif %}</title>
+	</head>
+	<body {%if user.id %} class="logged-in" {% endif %}>
+		<header role="banner">
+			<div id="logo">
+				<a href="/">
+					{{ source ( '@public/svg/logo.svg' ) }}
+					<span>AGRON</span>
+				</a>
+			</div>
+			{%if user.id %}
+			<div id="status">
+				Welcome,
+				<a href="/dashboard/profile">{{ user.first_name }}</a> | 
+				<a href="/logout">Sign Out</a>
+			</div>
+			{% endif %}
+		</header>
+		
+		<wrapper role="document">
+			{% block content %}
+			{% endblock %}
+		</wrapper>
+		
+		<footer role="contentInfo">
+			<p>
+				&copy; Agron.io | <a href="mailto:info@agron.io">info@agron.io</a>
+			</p>
+		</footer>
+		
+		<script src="/js/main.js"></script>
+	</body>
+</html>

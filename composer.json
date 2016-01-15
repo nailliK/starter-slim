@@ -1,0 +1,15 @@
+{
+	"require": {
+		"slim/slim": "@stable",
+		"ext-curl": "@stable",
+		"ext-json": "@stable",
+		"cartalyst/sentinel": "@stable",
+		"illuminate/database": "@stable",
+		"illuminate/events": "@stable",
+		"symfony/http-foundation": "@stable",
+		"ircmaxell/password-compat": "@stable",
+		"twig/twig": "@stable",
+		"phpmailer/phpmailer": "@stable",
+	    "laravel/homestead": "@stable"
+	}
+}

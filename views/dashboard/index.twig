@@ -1,0 +1,66 @@
+{% extends "app.twig" %}
+
+{% block content %}
+
+<aside>
+	<nav>
+		<div>
+			<a href="/dashboard" title="Dashboard">
+				<i class="fa fa-tachometer"></i>
+				<span>Dashboard</span>
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard/settings" title="Settings">
+				<i class="fa fa-wrench"></i>
+				<span>Settings</span>
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard/products" title="Products">
+				<i class="fa fa-dropbox"></i>
+				<span>Products</span>
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard/grow-ops" title="Grow Operations">
+				<i class="fa fa-building"></i>
+				<span>Grow Operations</span>
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard/orders" title="Orders">
+				<i class="fa fa-book"></i>
+				<span>Orders</span>
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard/vendors" title="Vendors">
+				<i class="fa fa-bullseye"></i>
+				<span>Vendors</span>
+			</a>
+		</div>
+		<div>
+			<a href="/dashboard/users" title="Users">
+				<i class="fa fa-users"></i>
+				<span>Users</span>
+			</a>
+		</div>
+	</nav>
+</aside>
+
+<main>
+	{% if title %}
+		<h2>{{ title }}</h2>
+	{% endif %}
+	
+	<section>
+		<h3>Card Title</h3>
+		<div>
+			Card content
+		</div>
+	</section>
+		
+</main>
+
+{% endblock %}

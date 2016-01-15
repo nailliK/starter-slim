@@ -1,0 +1,22 @@
+{% extends "app.twig" %}
+
+{% block content %}
+<form method="POST" role="form" id="subscriptionForm">
+	<label for="firstname">First Name</label>
+	<input placeholder="First name" name="firstname" id="firstname" type="text" autofocus value="">
+
+	<label for="lastname">Last Name</label>
+	<input placeholder="Last name" name="lastname" id="lastname" type="text" autofocus value="">
+
+	<label for="email">Email</label>
+	<input placeholder="Email" name="email" id="email" type="email" value="">
+
+	<label for="password">Password</label>
+	<input placeholder="Password" name="password" id="password" type="password" value="">
+
+	<label for="password_confirmation">Confirm Password</label>
+	<input placeholder="Confirm Password" name="password_confirmation" id="password_confirmation" type="password" value="">
+
+	<button type="submit">Join</button>
+</form>
+{% endblock %}
