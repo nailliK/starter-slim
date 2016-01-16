@@ -8,14 +8,14 @@
 		
 		<link rel="stylesheet" href="/css/main.css">
 		
-		<title>AGRON {%if title %} | {{ title }} {% endif %}</title>
+		<title>My SIte {%if title %} | {{ title }} {% endif %}</title>
 	</head>
 	<body {%if user.id %} class="logged-in" {% endif %}>
 		<header role="banner">
 			<div id="logo">
 				<a href="/">
 					{{ source ( '@public/svg/logo.svg' ) }}
-					<span>AGRON</span>
+					<span>My SIte</span>
 				</a>
 			</div>
 			{%if user.id %}
@@ -34,7 +34,7 @@
 		
 		<footer role="contentInfo">
 			<p>
-				&copy; Agron.io | <a href="mailto:info@agron.io">info@agron.io</a>
+				&copy; mysite.com | <a href="mailto:info@mysite.com">info@mysite.com</a>
 			</p>
 		</footer>
 		
