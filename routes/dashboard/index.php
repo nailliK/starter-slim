@@ -2,6 +2,7 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+
 // dashboard homepage
 $app->get('/dashboard', function (Request $request, Response $response) use($loggedUser) {
 	return $this->twig->render('dashboard/index.twig', array('user' => $loggedUser, 'title' => 'Dashboard'));

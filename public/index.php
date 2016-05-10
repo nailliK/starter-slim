@@ -7,13 +7,17 @@ session_start();
 require __DIR__.'/../vendor/autoload.php';
 
 // instantiate Slim
-$container = new \Slim\Container;
+$container = new \Slim\Container([
+	'settings' => [
+		'displayErrorDetails' => true
+	]
+]);
+$app = new \Slim\App($container);
 
 // instantiate Sintenel
-$container->sentinel = (new \Cartalyst\Sentinel\Native\Facades\Sentinel())->getSentinel();
+$container['sentinel'] = (new \Cartalyst\Sentinel\Native\Facades\Sentinel())->getSentinel();
 
 // instantiate Twig
-Twig_Autoloader::register();
 $loader = new Twig_Loader_Filesystem(__DIR__ . '/../views/');
 $loader->addPath(__DIR__, 'public');
 $container->twig = new Twig_Environment($loader, array(
@@ -21,7 +25,6 @@ $container->twig = new Twig_Environment($loader, array(
     'cache' => false,
 ));
 
-$app = new \Slim\App($container);
 
 // directory iterator
 function rsearch($folder, $pattern) {

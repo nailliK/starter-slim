@@ -3,22 +3,13 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
 // homepage
-$app->get('/', function (Request $request, Response $response) {
-	$loggedUser = $this->sentinel->check();
-
-	if (!$loggedUser) {
-		$new_response = $response->withHeader('refresh', '0.5; ' . '/login');
-	} else {
-		$new_response = $response->withHeader('refresh', '0.5; ' . '/dashboard');
-	}
-	
-	return $new_response;
-	
+$app->get('/', function (Request $request, Response $response) use($loggedUser) {
+	return $this->twig->render('home/index.twig', array('the' => 'variables', 'go' => 'here'));
 })->setName('home');
 
 // login
 $app->get('/login', function (Request $request, Response $response) {
-	return $this->twig->render('home/index.twig', array('the' => 'variables', 'go' => 'here'));
+	return $this->twig->render('home/login.twig', array('the' => 'variables', 'go' => 'here'));
 })->setName('login');
 
 // logout

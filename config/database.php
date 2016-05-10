@@ -4,7 +4,7 @@ $capsule = new \Illuminate\Database\Capsule\Manager();
 $capsule->addConnection([
     'driver' => 'mysql',
     'host' => 'localhost',
-    'database' => 'my_project',
+    'database' => 'slim',
     'username' => 'homestead',
     'password' => 'secret',
     'charset' => 'utf8',

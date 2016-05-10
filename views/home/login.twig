@@ -1,0 +1,13 @@
+{% extends "app.twig" %}
+
+{% block content %}
+	<form method="POST" role="form" id="login">
+		<label for="email">Email</label>
+		<input placeholder="Email" name="email" id="email" type="email" value="">
+
+		<label for="password">Password</label>
+		<input placeholder="Password" name="password" id="password" type="password" value="">
+
+		<button type="submit">Log In</button>
+	</form>
+{% endblock %}
