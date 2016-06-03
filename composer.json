@@ -9,6 +9,7 @@
 		"symfony/http-foundation": "@stable",
 		"ircmaxell/password-compat": "@stable",
 		"twig/twig": "@stable",
-		"phpmailer/phpmailer": "@stable"
+		"phpmailer/phpmailer": "@stable",
+		"michelf/php-markdown": "@stable"
 	}
 }
